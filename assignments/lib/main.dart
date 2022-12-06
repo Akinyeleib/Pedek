@@ -20,8 +20,13 @@ class AssignmentOne extends StatelessWidget {
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: clicked,
-          child: const Text("Hi"),
-          // backgroundColor: Colors.amber,
+          child: Text(
+            "Hi",
+          ),
+          hoverColor: Colors.indigo.shade900,
+          backgroundColor: Colors.amber,
+          foregroundColor: Colors.black,
+          splashColor: Colors.purple.shade900,
         ),
       ),
     );
