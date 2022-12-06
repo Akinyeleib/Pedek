@@ -37,7 +37,12 @@ class _AssignmentTwoState extends State<AssignmentTwo> {
             children: <Widget>[
               MyTextField(uname, "UserName"),
               MyPasswordField(pword, "Password"),
-              MyElevatedButton("Login"),
+              ElevatedButton(
+                child: Text("Login"),
+                onPressed: (() => {
+                      print("uname: ${uname.text}\npword: ${pword.text}"),
+                    }),
+              )
             ],
           ),
         ),
