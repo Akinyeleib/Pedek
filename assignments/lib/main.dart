@@ -13,10 +13,16 @@ class AssignmentOne extends StatelessWidget {
           centerTitle: true,
         ),
         body: const Center(
-          child: Text("My First Flutter app"),
+          child: Text(
+            "My First Flutter app\n Thanks Chief",
+            textAlign: TextAlign.center,
+          ),
         ),
-        floatingActionButton:
-            FloatingActionButton(onPressed: clicked, child: const Text("Hi")),
+        floatingActionButton: FloatingActionButton(
+          onPressed: clicked,
+          child: const Text("Hi"),
+          // backgroundColor: Colors.amber,
+        ),
       ),
     );
   }
