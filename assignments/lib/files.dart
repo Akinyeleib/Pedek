@@ -37,6 +37,7 @@ class _AssignmentTwoState extends State<AssignmentTwo> {
             children: <Widget>[
               MyTextField(uname, "UserName"),
               MyPasswordField(pword, "Password"),
+              MyElevatedButton("Login"),
             ],
           ),
         ),

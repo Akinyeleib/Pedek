@@ -38,3 +38,16 @@ class MyPasswordField extends StatelessWidget {
     );
   }
 }
+
+class MyElevatedButton extends StatelessWidget {
+  var text;
+  MyElevatedButton(this.text);
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      child: Text(text),
+      onPressed: (() => {}),
+    );
+  }
+}
