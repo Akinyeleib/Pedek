@@ -36,6 +36,10 @@ class _AssignmentTwoState extends State<AssignmentTwo> {
             children: <Widget>[
               Padding(
                 padding: my_padding,
+                child: Image.asset('assets/images/akinyeleib.jpg'),
+              ),
+              Padding(
+                padding: my_padding,
                 child: MyTextField(uname, "UserName"),
               ),
               Padding(
