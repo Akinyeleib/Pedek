@@ -26,9 +26,8 @@ class _AssignmentTwoState extends State<AssignmentTwo> {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text(
-            "AssignmentTwo",
-          ),
+          title: Text("AssignmentTwo"),
+          centerTitle: true,
         ),
         body: Padding(
           padding: EdgeInsets.all(20.0),
@@ -49,6 +48,8 @@ class _AssignmentTwoState extends State<AssignmentTwo> {
                       print(
                         "uname: ${uname.text}\npword: ${pword.text}",
                       ),
+                      uname.text = "",
+                      pword.text = ""
                     }),
               )
             ],
