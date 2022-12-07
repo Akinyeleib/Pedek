@@ -15,6 +15,7 @@ class MyTextField extends StatelessWidget {
       decoration: InputDecoration(
           icon: Icon(Icons.input),
           border: OutlineInputBorder(),
+          labelText: hint,
           hintText: hint),
     );
   }
@@ -33,8 +34,9 @@ class MyPasswordField extends StatelessWidget {
       obscuringCharacter: "*",
       textAlign: TextAlign.center,
       decoration: InputDecoration(
-        icon: Icon(Icons.input),
+        icon: Icon(Icons.lock),
         border: OutlineInputBorder(),
+        labelText: hint,
         hintText: hint,
       ),
     );
