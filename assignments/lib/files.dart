@@ -35,12 +35,20 @@ class _AssignmentTwoState extends State<AssignmentTwo> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              MyTextField(uname, "UserName"),
-              MyPasswordField(pword, "Password"),
+              Padding(
+                padding: my_padding,
+                child: MyTextField(uname, "UserName"),
+              ),
+              Padding(
+                padding: my_padding,
+                child: MyPasswordField(pword, "Password"),
+              ),
               ElevatedButton(
                 child: Text("Login"),
                 onPressed: (() => {
-                      print("uname: ${uname.text}\npword: ${pword.text}"),
+                      print(
+                        "uname: ${uname.text}\npword: ${pword.text}",
+                      ),
                     }),
               )
             ],
