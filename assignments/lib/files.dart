@@ -15,6 +15,7 @@ class _AssignmentTwoState extends State<AssignmentTwo> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.purple,
         textTheme: TextTheme(
@@ -29,34 +30,36 @@ class _AssignmentTwoState extends State<AssignmentTwo> {
           title: Text("AssignmentTwo"),
           centerTitle: true,
         ),
-        body: Padding(
-          padding: EdgeInsets.all(20.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Padding(
-                padding: my_padding,
-                child: Image.asset('assets/images/akinyeleib.jpg'),
-              ),
-              Padding(
-                padding: my_padding,
-                child: MyTextField(uname, "UserName"),
-              ),
-              Padding(
-                padding: my_padding,
-                child: MyPasswordField(pword, "Password"),
-              ),
-              ElevatedButton(
-                child: Text("Login"),
-                onPressed: (() => {
-                      print(
-                        "uname: ${uname.text}\npword: ${pword.text}",
-                      ),
-                      uname.text = "",
-                      pword.text = ""
-                    }),
-              )
-            ],
+        body: SingleChildScrollView(
+          child: Padding(
+            padding: EdgeInsets.all(20.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Padding(
+                  padding: my_padding,
+                  child: Image.asset('assets/images/akinyeleib.jpg'),
+                ),
+                Padding(
+                  padding: my_padding,
+                  child: MyTextField(uname, "Email"),
+                ),
+                Padding(
+                  padding: my_padding,
+                  child: MyPasswordField(pword, "Password"),
+                ),
+                ElevatedButton(
+                  child: Text("Login"),
+                  onPressed: (() => {
+                        print(
+                          "uname: ${uname.text}\npword: ${pword.text}",
+                        ),
+                        uname.text = "",
+                        pword.text = ""
+                      }),
+                )
+              ],
+            ),
           ),
         ),
       ),
