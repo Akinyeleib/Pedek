@@ -35,13 +35,19 @@ class MyPasswordField extends StatelessWidget {
       obscuringCharacter: "*",
       textAlign: TextAlign.center,
       decoration: InputDecoration(
-        prefixIcon: Icon(Icons.password_rounded),
-        suffixIcon: Icon(Icons.visibility),
-        border: OutlineInputBorder(),
-        labelText: hint,
-        hintText: hint,
-      ),
+          prefixIcon: Icon(Icons.password_rounded),
+          border: OutlineInputBorder(),
+          labelText: hint,
+          hintText: hint,
+          suffix: InkWell(
+            onTap: toggle,
+            child: Icon(Icons.visibility),
+          )),
     );
+  }
+
+  void toggle() {
+    print('Hello here');
   }
 }
 
