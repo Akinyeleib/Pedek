@@ -13,7 +13,7 @@ class MyTextField extends StatelessWidget {
       controller: control,
       textAlign: TextAlign.center,
       decoration: InputDecoration(
-          icon: Icon(Icons.email_outlined),
+          prefixIcon: Icon(Icons.email_outlined),
           border: OutlineInputBorder(),
           labelText: hint,
           hintText: hint),
@@ -34,7 +34,7 @@ class MyPasswordField extends StatelessWidget {
       obscuringCharacter: "*",
       textAlign: TextAlign.center,
       decoration: InputDecoration(
-        icon: Icon(Icons.password_rounded),
+        prefixIcon: Icon(Icons.password_rounded),
         border: OutlineInputBorder(),
         labelText: hint,
         hintText: hint,
