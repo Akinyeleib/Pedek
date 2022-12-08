@@ -27,7 +27,7 @@ class _AssignmentTwoState extends State<AssignmentTwo> {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text("AssignmentTwo"),
+          title: Text("Login"),
           centerTitle: true,
         ),
         body: SingleChildScrollView(
@@ -41,7 +41,10 @@ class _AssignmentTwoState extends State<AssignmentTwo> {
                   // child: Container(
                   //   width: 150,
                   //   height: 150,
-                  child: Image.asset('assets/images/akinyeleib.jpg'),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(25),
+                    child: Image.asset('assets/images/akinyeleib.jpg'),
+                  ),
                   // ),
                 ),
                 MyTextField(uname, "Email"),
@@ -59,7 +62,7 @@ class _AssignmentTwoState extends State<AssignmentTwo> {
                               uname.text = "",
                               pword.text = ""
                             }),
-                        child: Text("Login"),
+                        child: Text("Sign In"),
                       ),
                     ),
                   ),
