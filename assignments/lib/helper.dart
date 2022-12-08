@@ -22,32 +22,54 @@ class MyTextField extends StatelessWidget {
   }
 }
 
-class MyPasswordField extends StatelessWidget {
+class MyPasswordField extends StatefulWidget {
   TextEditingController control;
   String hint;
+
   MyPasswordField(this.control, this.hint);
+
+  @override
+  State<MyPasswordField> createState() => _MyPasswordFieldState();
+}
+
+class _MyPasswordFieldState extends State<MyPasswordField> {
+  bool show = false;
+
+  Icon visible = Icon(Icons.visibility_off);
+  Icon not_visible = Icon(Icons.visibility);
+  Icon my_icon = Icon(Icons.visibility_off);
 
   @override
   Widget build(BuildContext context) {
     return TextField(
-      controller: control,
-      obscureText: true,
+      controller: widget.control,
+      obscureText: show,
       obscuringCharacter: "*",
       textAlign: TextAlign.center,
       decoration: InputDecoration(
-          prefixIcon: Icon(Icons.password_rounded),
-          border: OutlineInputBorder(),
-          labelText: hint,
-          hintText: hint,
-          suffix: InkWell(
-            onTap: toggle,
-            child: Icon(Icons.visibility),
-          )),
+        prefixIcon: Icon(Icons.password_rounded),
+        border: OutlineInputBorder(),
+        labelText: widget.hint,
+        hintText: widget.hint,
+        suffix: InkWell(
+          onTap: toggle,
+          child: my_icon,
+        ),
+      ),
     );
   }
 
   void toggle() {
-    print('Hello here');
+    setState(
+      () {
+        if (show) {
+          my_icon = Icon(Icons.visibility_off);
+        } else {
+          my_icon = Icon(Icons.visibility);
+        }
+        show = !show;
+      },
+    );
   }
 }
 
