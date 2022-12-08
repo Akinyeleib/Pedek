@@ -9,14 +9,17 @@ class MyTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
-      controller: control,
-      textAlign: TextAlign.center,
-      decoration: InputDecoration(
-        prefixIcon: Icon(Icons.email_outlined),
-        border: OutlineInputBorder(),
-        labelText: hint,
-        hintText: hint,
+    return Padding(
+      padding: my_padding,
+      child: TextField(
+        controller: control,
+        textAlign: TextAlign.center,
+        decoration: InputDecoration(
+          prefixIcon: Icon(Icons.email_outlined),
+          border: OutlineInputBorder(),
+          labelText: hint,
+          hintText: hint,
+        ),
       ),
     );
   }
@@ -41,19 +44,23 @@ class _MyPasswordFieldState extends State<MyPasswordField> {
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
-      controller: widget.control,
-      obscureText: show,
-      obscuringCharacter: "*",
-      textAlign: TextAlign.center,
-      decoration: InputDecoration(
-        prefixIcon: Icon(Icons.password_rounded),
-        border: OutlineInputBorder(),
-        labelText: widget.hint,
-        hintText: widget.hint,
-        suffix: InkWell(
-          onTap: toggle,
-          child: my_icon,
+    return Padding(
+      padding: my_padding,
+      child: TextField(
+        controller: widget.control,
+        obscureText: show,
+        obscuringCharacter: "*",
+        textAlign: TextAlign.center,
+        decoration: InputDecoration(
+          prefixIcon: Icon(Icons.password_rounded),
+          border: OutlineInputBorder(),
+          // suffixIcon: my_icon,
+          labelText: widget.hint,
+          hintText: widget.hint,
+          suffix: InkWell(
+            onTap: toggle,
+            child: my_icon,
+          ),
         ),
       ),
     );
@@ -63,25 +70,12 @@ class _MyPasswordFieldState extends State<MyPasswordField> {
     setState(
       () {
         if (show) {
-          my_icon = Icon(Icons.visibility_off);
+          my_icon = const Icon(Icons.visibility_off);
         } else {
-          my_icon = Icon(Icons.visibility);
+          my_icon = const Icon(Icons.visibility);
         }
         show = !show;
       },
-    );
-  }
-}
-
-class MyElevatedButton extends StatelessWidget {
-  var text;
-  MyElevatedButton(this.text);
-
-  @override
-  Widget build(BuildContext context) {
-    return ElevatedButton(
-      child: Text(text),
-      onPressed: (() => {}),
     );
   }
 }

@@ -44,24 +44,26 @@ class _AssignmentTwoState extends State<AssignmentTwo> {
                   child: Image.asset('assets/images/akinyeleib.jpg'),
                   // ),
                 ),
+                MyTextField(uname, "Email"),
+                MyPasswordField(pword, "Password"),
                 Padding(
                   padding: my_padding,
-                  child: MyTextField(uname, "Email"),
+                  child: SizedBox(
+                    width: double.infinity,
+                    child: Card(
+                      color: Colors.purple,
+                      child: ElevatedButton(
+                        onPressed: (() => {
+                              print(
+                                  "uname: ${uname.text}\npword: ${pword.text}"),
+                              uname.text = "",
+                              pword.text = ""
+                            }),
+                        child: Text("Login"),
+                      ),
+                    ),
+                  ),
                 ),
-                Padding(
-                  padding: my_padding,
-                  child: MyPasswordField(pword, "Password"),
-                ),
-                ElevatedButton(
-                  child: Text("Login"),
-                  onPressed: (() => {
-                        print(
-                          "uname: ${uname.text}\npword: ${pword.text}",
-                        ),
-                        uname.text = "",
-                        pword.text = ""
-                      }),
-                )
               ],
             ),
           ),
