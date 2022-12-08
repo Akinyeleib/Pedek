@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 var my_padding = EdgeInsets.only(top: 0, left: 20, right: 20, bottom: 30);
 
 class MyTextField extends StatelessWidget {
-  var control;
-  var hint;
+  TextEditingController control;
+  String hint;
   MyTextField(this.control, this.hint);
 
   @override
@@ -13,17 +13,18 @@ class MyTextField extends StatelessWidget {
       controller: control,
       textAlign: TextAlign.center,
       decoration: InputDecoration(
-          prefixIcon: Icon(Icons.email_outlined),
-          border: OutlineInputBorder(),
-          labelText: hint,
-          hintText: hint),
+        prefixIcon: Icon(Icons.email_outlined),
+        border: OutlineInputBorder(),
+        labelText: hint,
+        hintText: hint,
+      ),
     );
   }
 }
 
 class MyPasswordField extends StatelessWidget {
-  var control;
-  var hint;
+  TextEditingController control;
+  String hint;
   MyPasswordField(this.control, this.hint);
 
   @override
@@ -35,6 +36,7 @@ class MyPasswordField extends StatelessWidget {
       textAlign: TextAlign.center,
       decoration: InputDecoration(
         prefixIcon: Icon(Icons.password_rounded),
+        suffixIcon: Icon(Icons.visibility),
         border: OutlineInputBorder(),
         labelText: hint,
         hintText: hint,

@@ -38,11 +38,11 @@ class _AssignmentTwoState extends State<AssignmentTwo> {
               children: <Widget>[
                 Padding(
                   padding: my_padding,
-                  child: Container(
-                    width: 150,
-                    height: 150,
-                    child: Image.asset('assets/images/akinyeleib.jpg'),
-                  ),
+                  // child: Container(
+                  //   width: 150,
+                  //   height: 150,
+                  child: Image.asset('assets/images/akinyeleib.jpg'),
+                  // ),
                 ),
                 Padding(
                   padding: my_padding,
