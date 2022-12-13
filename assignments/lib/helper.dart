@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-var my_padding = EdgeInsets.only(top: 0, left: 20, right: 20, bottom: 30);
+var my_padding = EdgeInsets.only(top: 0, left: 20, right: 20, bottom: 20);
 
 class MyTextField extends StatelessWidget {
   TextEditingController control;
