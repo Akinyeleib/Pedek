@@ -9,8 +9,8 @@ class MyTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: my_padding,
+    return Container(
+      margin: EdgeInsets.symmetric(vertical: 10),
       child: TextField(
         controller: control,
         textAlign: TextAlign.center,
@@ -44,15 +44,15 @@ class _MyPasswordFieldState extends State<MyPasswordField> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: my_padding,
+    return Container(
+      margin: EdgeInsets.symmetric(vertical: 10),
       child: TextField(
         controller: widget.control,
         obscureText: show,
         obscuringCharacter: "*",
         textAlign: TextAlign.center,
         decoration: InputDecoration(
-          prefixIcon: Icon(Icons.password_rounded),
+          prefixIcon: Icon(Icons.lock_outline),
           border: OutlineInputBorder(),
           // suffixIcon: my_icon,
           labelText: widget.hint,
