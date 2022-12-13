@@ -2,14 +2,14 @@ import 'package:assignments/Task2Help.dart';
 import 'package:flutter/material.dart';
 import 'helper.dart';
 
-class AssignmentThree extends StatefulWidget {
-  const AssignmentThree({super.key});
+class Login extends StatefulWidget {
+  const Login({super.key});
 
   @override
-  State<AssignmentThree> createState() => _AssignmentThreeState();
+  State<Login> createState() => _LoginState();
 }
 
-class _AssignmentThreeState extends State<AssignmentThree> {
+class _LoginState extends State<Login> {
   var uname = TextEditingController();
   var pword = TextEditingController();
   var pword2 = TextEditingController();
@@ -19,7 +19,7 @@ class _AssignmentThreeState extends State<AssignmentThree> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: primaryColor,
+        primarySwatch: Colors.amber,
         textTheme: const TextTheme(
           bodyText1: TextStyle(
             fontSize: 30,
@@ -100,7 +100,7 @@ class _AssignmentThreeState extends State<AssignmentThree> {
                           pword.text = "",
                           pword2.text = ""
                         }),
-                    child: Text(
+                    child: const Text(
                       "Sign In",
                       style: TextStyle(
                         color: Colors.white,
@@ -109,48 +109,34 @@ class _AssignmentThreeState extends State<AssignmentThree> {
                     ),
                   ),
                 ),
+                Container(
+                  alignment: Alignment.center,
+                  child: const Text("Or sign up with"),
+                ),
+                // Container(
+                //   child: Row(
+                //     crossAxisAlignment: CrossAxisAlignment.end,
+                //     children: [
+                //       ClipRRect(
+                //         borderRadius: BorderRadius.circular(25),
+                //         child: Image.asset('assets/images/twitter.png'),
+                //       ),
+                //       ClipRRect(
+                //         borderRadius: BorderRadius.circular(25),
+                //         child: Image.asset('assets/images/facebook.png'),
+                //       ),
+                //       ClipRRect(
+                //         borderRadius: BorderRadius.circular(25),
+                //         child: Image.asset('assets/images/twitter.png'),
+                //       ),
+                //     ],
+                //   ),
+                // ),
               ],
             ),
           ),
         ),
       ),
     );
-  }
-}
-
-class AssignmentOne extends StatelessWidget {
-  int click = 0;
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text("Flutter"),
-          centerTitle: true,
-        ),
-        body: const Center(
-          child: Text(
-            "My First Flutter app\n Thanks Chief",
-            textAlign: TextAlign.center,
-          ),
-        ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: clicked,
-          child: Text(
-            "Hi",
-          ),
-          hoverColor: Colors.indigo.shade900,
-          backgroundColor: Colors.amber,
-          foregroundColor: Colors.black,
-          splashColor: Colors.purple.shade900,
-        ),
-      ),
-    );
-  }
-
-  void clicked() {
-    click++;
-    String freq = click < 2 ? 'time' : 'times';
-    print('Button Clicked... ${click} $freq');
   }
 }
